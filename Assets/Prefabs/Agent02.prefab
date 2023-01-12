@@ -99,8 +99,8 @@ GameObject:
   - component: {fileID: 5403095347145605591}
   - component: {fileID: 5403095347145605590}
   m_Layer: 0
-  m_Name: Sussy
-  m_TagString: Untagged
+  m_Name: Agent02
+  m_TagString: Agent02
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5403095347145605609}
-  m_LocalRotation: {x: -0, y: -0.033650517, z: -0, w: 0.99943376}
+  m_LocalRotation: {x: 0, y: -0.03365228, z: 0, w: 0.99943364}
   m_LocalPosition: {x: 0.0030268568, y: 1, z: 0.00010197237}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -135,6 +135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perception: {fileID: 5403095347145605589}
   movement: {fileID: 5403095347145605586}
+  seekWeight: 0
+  fleeWeight: 2
   wanderDistance: 1
   wanderRadius: 5
   wanderDisplacement: 30
@@ -167,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 3
   maxAngle: 180
-  tagName: 
+  tagName: Agen01
 --- !u!33 &5403095347145605588
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -196,7 +198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d127150658422c54f8ebd8e3c3214ff8, type: 2}
+  - {fileID: 2100000, guid: 889f841b1432b5c4c956f4c64a787c11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
