@@ -137,11 +137,7 @@ MonoBehaviour:
   perception: {fileID: 5403095347145605589}
   movement: {fileID: 5403095347145605586}
   flockPerception: {fileID: -1602177038803431973}
-  seekWeight: 2
-  fleeWeight: 0
-  wanderDistance: 1
-  wanderRadius: 5
-  wanderDisplacement: 30
+  data: {fileID: 11400000, guid: 859975f5b02e06241bd50383a238cba1, type: 2}
 --- !u!114 &5403095347145605586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07a35bcfd0bacc41b700309995dc1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 1.75
-  minSpeed: 1
+  maxSpeed: 5
+  minSpeed: 5
   maxForce: 70
 --- !u!114 &5403095347145605589
 MonoBehaviour:

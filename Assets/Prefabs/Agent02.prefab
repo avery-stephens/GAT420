@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5403095347145605584}
   - component: {fileID: 5403095347145605587}
   - component: {fileID: 5403095347145605586}
+  - component: {fileID: -4320014943919860736}
   - component: {fileID: 5403095347145605589}
   - component: {fileID: 5403095347145605588}
   - component: {fileID: 5403095347145605591}
@@ -135,11 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perception: {fileID: 5403095347145605589}
   movement: {fileID: 5403095347145605586}
-  seekWeight: 0
-  fleeWeight: 2
-  wanderDistance: 1
-  wanderRadius: 5
-  wanderDisplacement: 30
+  flockPerception: {fileID: -4320014943919860736}
+  data: {fileID: 11400000, guid: 079aaece7c85d46458b7211b37cbdc24, type: 2}
 --- !u!114 &5403095347145605586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +153,21 @@ MonoBehaviour:
   maxSpeed: 5
   minSpeed: 5
   maxForce: 10
+--- !u!114 &-4320014943919860736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403095347145605609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1208d7b55df0fda40bf3e27eb41f5c2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 8
+  maxAngle: 180
+  tagName: Agent02
 --- !u!114 &5403095347145605589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,8 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1208d7b55df0fda40bf3e27eb41f5c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 3
-  maxAngle: 180
+  distance: 11.4
+  maxAngle: 90
   tagName: Agen01
 --- !u!33 &5403095347145605588
 MeshFilter:
