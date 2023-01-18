@@ -9,12 +9,15 @@ public class AutonomousSussyData : ScriptableObject
     [Range(0, 20)] public float wanderDistance = 4;
     [Range(0, 20)] public float wanderRadius = 4;
     [Range(0, 20)] public float wanderDisplacement = 4;
+
     [Header("Flocking")]
     [Range(0, 20)] public float separationRadius = 1;
+
     [Header("Weights")]
     [Range(0, 5)] public float seekWeight = 1;
     [Range(0, 5)] public float fleeWeight = 1;
     [Range(0, 5)] public float cohesionWeight = 1;
     [Range(0, 5)] public float separationWeight = 1;
-    [Range(0, 5)] public float alignmentWeight = 1;
+    [Range(0, 5)] public float alignmentWeight = 1; 
+    [Range(0, 5)] public float obstacleWeight = 1;
 }

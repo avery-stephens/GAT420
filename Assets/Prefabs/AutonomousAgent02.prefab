@@ -94,13 +94,14 @@ GameObject:
   - component: {fileID: 5403095347145605584}
   - component: {fileID: 5403095347145605587}
   - component: {fileID: 5403095347145605586}
-  - component: {fileID: -4320014943919860736}
-  - component: {fileID: 5403095347145605589}
+  - component: {fileID: 2897052715913686187}
+  - component: {fileID: 8001084766305742566}
+  - component: {fileID: 1945219099506299254}
   - component: {fileID: 5403095347145605588}
   - component: {fileID: 5403095347145605591}
   - component: {fileID: 5403095347145605590}
   m_Layer: 0
-  m_Name: Agent02
+  m_Name: AutonomousAgent02
   m_TagString: Agent02
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,6 +120,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5403095346334594467}
+  - {fileID: 2969787629641879852}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -3.857, z: 0}
@@ -134,9 +136,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09794740d2aeb8b48abb6062a2694b49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perception: {fileID: 5403095347145605589}
+  perception: {fileID: 2897052715913686187}
   movement: {fileID: 5403095347145605586}
-  flockPerception: {fileID: -4320014943919860736}
+  flockPerception: {fileID: 8001084766305742566}
+  obstaclePerception: {fileID: 1945219099506299254}
   data: {fileID: 11400000, guid: 079aaece7c85d46458b7211b37cbdc24, type: 2}
 --- !u!114 &5403095347145605586
 MonoBehaviour:
@@ -150,10 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07a35bcfd0bacc41b700309995dc1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
-  minSpeed: 5
-  maxForce: 10
---- !u!114 &-4320014943919860736
+  maxSpeed: 10
+  minSpeed: 3.1
+  maxForce: 70
+--- !u!114 &2897052715913686187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,27 +165,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 5403095347145605609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1208d7b55df0fda40bf3e27eb41f5c2b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ff292d11d0b5fc42a57e646296a61f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 8
-  maxAngle: 180
-  tagName: Agent02
---- !u!114 &5403095347145605589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5403095347145605609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1208d7b55df0fda40bf3e27eb41f5c2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distance: 11.4
-  maxAngle: 90
   tagName: Agen01
+  distance: 15
+  maxAngle: 80
+  raycastTransform: {fileID: 2969787629641879852}
+  numRaycast: 16
+--- !u!114 &8001084766305742566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403095347145605609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff292d11d0b5fc42a57e646296a61f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Agent02
+  distance: 10
+  maxAngle: 150
+  raycastTransform: {fileID: 2969787629641879852}
+  numRaycast: 24
+--- !u!114 &1945219099506299254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403095347145605609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440b06e927914ea44be0ca3760e1807e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastTransform: {fileID: 2969787629641879852}
+  distance: 10
+  maxAngle: 45
+  numRaycast: 16
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!33 &5403095347145605588
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -211,7 +237,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 889f841b1432b5c4c956f4c64a787c11, type: 2}
+  - {fileID: 2100000, guid: 8361c2db94b862244ba099a70d4e4c28, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -247,3 +273,34 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &6866712893469435311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2969787629641879852}
+  m_Layer: 0
+  m_Name: Eye
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2969787629641879852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6866712893469435311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 0.275, z: 0.522}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5403095347145605584}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
