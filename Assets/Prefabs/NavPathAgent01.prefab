@@ -93,13 +93,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5403095347145605584}
   - component: {fileID: 8024957663778720030}
+  - component: {fileID: -3965823706358729921}
   - component: {fileID: 5403095347145605586}
   - component: {fileID: 5403095347145605588}
   - component: {fileID: 5403095347145605591}
   - component: {fileID: 5403095347145605590}
   - component: {fileID: 607567775656839730}
   m_Layer: 0
-  m_Name: NavAgent01
+  m_Name: NavPathAgent01
   m_TagString: Agen01
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +138,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perception: {fileID: 0}
   movement: {fileID: 5403095347145605586}
-  startNode: {fileID: 0}
+  navPath: {fileID: -3965823706358729921}
+  navPathStartNode: {fileID: 0}
+  navPathEndNode: {fileID: 0}
+--- !u!114 &-3965823706358729921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403095347145605609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e273f29500250d4a85c786ad2456feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5403095347145605586
 MonoBehaviour:
   m_ObjectHideFlags: 0
