@@ -23,7 +23,12 @@ public class Movement : MonoBehaviour
         ApplyForce(direction * maxForce);
     }
 
-    void LateUpdate()
+	public void Stop()
+	{
+		velocity = Vector3.zero;
+	}
+
+	void LateUpdate()
     {
         velocity += acceleration * Time.deltaTime;
         velocity = Utilities.ClampMagnitude(velocity, minSpeed, maxSpeed);
