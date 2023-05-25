@@ -59,6 +59,18 @@ MonoBehaviour:
   animator: {fileID: 2033914126039822569}
   navigation: {fileID: 5571937586032411662}
   perceived: []
+  health:
+    value: 100
+  timer:
+    value: 0
+  enemyDistance:
+    value: 0
+  enemySeen:
+    value: 0
+  animationDone:
+    value: 0
+  atDestination:
+    value: 0
   mainCamera: {fileID: 0}
 --- !u!114 &5571937586032411663
 MonoBehaviour:
@@ -74,8 +86,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   minSpeed: 5
-  maxForce: 5
-  turnRate: 90
+  maxForce: 20
+  turnRate: 360
   navMeshAgent: {fileID: 5571937586032411889}
 --- !u!114 &5571937586032411662
 MonoBehaviour:
